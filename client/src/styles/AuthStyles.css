@@ -1,0 +1,95 @@
+/* ===================================
+========= Register Page  */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    flex-direction: column;
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+    padding: 20px;
+}
+
+.form-container form {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-container form:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px;
+}
+
+.form-container form .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-container form input {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    padding: 8px 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-container form input:focus {
+    outline: none;
+    border-bottom: 2px solid green;
+    box-shadow: 0 2px 5px rgba(0, 128, 0, 0.2);
+}
+
+.form-container form button {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #000;
+    color: white;
+    width: 250px;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-container form button:hover {
+    border: 1px solid black;
+    background: linear-gradient(to right, #434343, #000000);
+    color: #fff;
+}
+
+.forgot-btn {
+    background-color: #434343a4 !important;
+    border: 0 !important;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.forgot-btn:hover {
+    color: white !important;
+    background-color: #434343;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 576px) {
+    .form-container form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-container form button {
+        width: 100%;
+    }
+}

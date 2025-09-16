@@ -1,0 +1,122 @@
+/* =========================
+  All Product Cards Hover
+========================= */
+.product-card,
+.category .card,
+.products-grid .card,
+.similar-products .card {
+    background-color: rgba(128, 128, 128, 0.07);
+    flex: 1 1 18rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-card:hover,
+.category .card:hover,
+.products-grid .card:hover,
+.similar-products .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Images */
+.product-card img,
+.category .card img,
+.products-grid .card img,
+.similar-products .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover,
+.category .card img:hover,
+.products-grid .card img:hover,
+.similar-products .card img:hover {
+    transform: scale(1.05);
+}
+
+/* Card Name & Price */
+.product-card .card-name-price,
+.category .card-name-price,
+.products-grid .card-name-price,
+.similar-products .card-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Price */
+.product-card .card-price,
+.category .card-price,
+.products-grid .card-price,
+.similar-products .card-price {
+    color: green;
+    font-weight: bold;
+}
+
+/* Card Text */
+.product-card .card-text,
+.category .card-text,
+.products-grid .card-text,
+.similar-products .card-text {
+    color: #666;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+}
+
+/* Card Button */
+.product-card button,
+.category button,
+.products-grid .card button,
+.similar-products button {
+    border-radius: 0;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.product-card button:hover,
+.category button:hover,
+.products-grid .card button:hover,
+.similar-products button:hover {
+    background-color: green;
+    color: white;
+}
+
+/* =========================
+  Responsive Design
+========================= */
+@media (max-width: 992px) {
+
+    .product-card,
+    .category .card,
+    .products-grid .card,
+    .similar-products .card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .product-card,
+    .category .card,
+    .products-grid .card,
+    .similar-products .card {
+        flex: 1 1 100%;
+    }
+}

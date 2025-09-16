@@ -1,0 +1,214 @@
+/* =========================
+  Homepage Styles
+========================= */
+.home-page-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+  Filters Section
+========================= */
+.filters {
+    flex: 0 0 250px;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 100px;
+}
+
+.filters h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    padding-bottom: 5px;
+}
+
+.filters-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.filters button {
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* =========================
+  Products Section
+========================= */
+.products-section {
+    flex: 1;
+}
+
+.products-section h1 {
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 600;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* ✅ Always 4 per row on desktop */
+    gap: 20px;
+}
+
+.products-grid .card {
+    width: 100%;
+    /* ✅ fixed 18rem hataya */
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.07);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.products-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.products-grid .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.products-grid .card img:hover {
+    transform: scale(0.95);
+}
+
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: green;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card button {
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 48%;
+}
+
+/* Load More Button */
+.loadmore {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.loadmore:hover {
+    background-color: green;
+}
+
+/* =========================
+  Banner Image
+========================= */
+.banner-img {
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* always 4 per row on desktop */
+    gap: 20px;
+}
+
+.products-grid .card {
+    width: 100%;
+    /* fix width hata diya */
+    height: 100%;
+}
+
+/* =========================
+  Responsive Design
+========================= */
+@media (max-width: 1200px) {
+    .filters {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-page-container {
+        flex-direction: column;
+    }
+
+    .filters {
+        max-height: none;
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* ✅ 3 per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* ✅ 2 per row on small screens */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* ✅ 1 per row on mobile */
+    }
+
+    .card button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
